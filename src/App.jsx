@@ -17,7 +17,12 @@ import CookieBanner from "./components/CookieBanner.jsx";
 
 export default function App() {
   return (
-    <div className="min-h-screen">
+    <div className="relative min-h-screen">
+      <div
+        className="grain-overlay pointer-events-none fixed inset-0 z-0 opacity-[0.035] mix-blend-multiply"
+        aria-hidden
+      />
+      <div className="relative z-10">
       <Header />
       <main>
         <Hero />
@@ -35,6 +40,7 @@ export default function App() {
       </main>
       <Footer />
       <CookieBanner />
+      </div>
     </div>
   );
 }

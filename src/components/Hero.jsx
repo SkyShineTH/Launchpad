@@ -1,9 +1,21 @@
 export default function Hero() {
   return (
-    <section className="border-b border-black/[0.06] bg-canvas-elevated px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-20">
-      <div className="mx-auto grid max-w-content gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+    <section className="relative isolate overflow-hidden border-b border-black/[0.06] bg-canvas-elevated px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-20">
+      <div
+        className="pointer-events-none absolute -left-[20%] -top-[30%] h-[min(90vw,44rem)] w-[min(90vw,44rem)] rounded-full bg-[radial-gradient(circle_at_center,rgba(15,107,99,0.16)_0%,transparent_68%)] blur-2xl motion-reduce:blur-md"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute -bottom-[35%] -right-[15%] h-[min(85vw,40rem)] w-[min(85vw,40rem)] rounded-full bg-[radial-gradient(circle_at_center,rgba(15,107,99,0.11)_0%,rgba(232,243,242,0.5)_45%,transparent_70%)] blur-3xl motion-reduce:blur-xl"
+        aria-hidden
+      />
+      <div
+        className="grain-overlay pointer-events-none absolute inset-0 opacity-[0.045] mix-blend-overlay motion-reduce:opacity-[0.02]"
+        aria-hidden
+      />
+      <div className="relative z-10 mx-auto grid max-w-content gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
         <div>
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-black/[0.06] bg-canvas px-3 py-1 text-xs font-medium text-ink-muted">
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-black/[0.06] bg-canvas/90 px-3 py-1 text-xs font-medium text-ink-muted shadow-sm backdrop-blur-sm transition-colors duration-200 hover:border-black/[0.1] motion-reduce:transition-none">
             <span className="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden />
             Open for freelance scope · Remote OK
           </p>
@@ -21,7 +33,7 @@ export default function Hero() {
               href="https://github.com/skyshineth"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand hover:text-brand-hover"
+              className="rounded-sm text-brand underline-offset-2 transition-colors duration-200 hover:text-brand-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand motion-reduce:transition-none"
             >
               @skyshineth
             </a>
@@ -34,7 +46,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <a
               href="mailto:fasai.utawan@gmail.com?subject=Project%20inquiry"
-              className="inline-flex rounded-full bg-brand px-6 py-3 text-sm font-semibold text-brand-foreground shadow-soft transition hover:bg-brand-hover"
+              className="inline-flex rounded-full bg-brand px-6 py-3 text-sm font-semibold text-brand-foreground shadow-soft transition duration-200 hover:bg-brand-hover hover:shadow-md motion-safe:hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             >
               Start a conversation
             </a>
@@ -42,7 +54,7 @@ export default function Hero() {
               href="https://skyshine.online/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-brand-hover"
+              className="inline-flex items-center gap-2 rounded-full px-1 py-1 text-sm font-semibold text-brand transition-colors duration-200 hover:text-brand-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand motion-reduce:transition-none"
             >
               Full portfolio · CV
               <span aria-hidden>→</span>
@@ -53,7 +65,7 @@ export default function Hero() {
               href="https://skyshine.online/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-ink-muted underline-offset-2 hover:underline"
+              className="font-semibold text-ink-muted underline-offset-2 transition-colors duration-200 hover:text-ink hover:underline focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand motion-reduce:transition-none"
             >
               skyshine.online
             </a>
@@ -62,8 +74,11 @@ export default function Hero() {
           </p>
         </div>
         <div className="relative">
-          <div className="absolute -right-6 -top-6 h-40 w-40 rounded-full bg-brand-muted/80 blur-3xl" aria-hidden />
-          <div className="relative overflow-hidden rounded-2xl border border-black/[0.06] bg-canvas shadow-card">
+          <div
+            className="absolute -right-6 -top-6 h-44 w-44 rounded-full bg-brand-muted/90 blur-3xl motion-reduce:blur-2xl"
+            aria-hidden
+          />
+          <div className="relative overflow-hidden rounded-2xl border border-black/[0.06] bg-canvas/95 shadow-card backdrop-blur-[2px] transition-shadow duration-300 motion-safe:hover:shadow-card motion-safe:hover:border-black/[0.08] motion-reduce:transition-none">
             <div className="border-b border-black/[0.06] bg-canvas-elevated px-4 py-3">
               <div className="flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-red-400/90" />
